@@ -13,6 +13,7 @@ public class CountingTxt {
         HashMap<Character, Integer> charCount = new HashMap<>();
         File file = new File("dracula.txt");
         String sentence = "";
+        int totCnt = 0;
 
         try {
 
@@ -47,6 +48,7 @@ public class CountingTxt {
                 if (sentenceChar.equals(counter.getKey())) {
 
                     cnt++;
+                    totCnt++;
 
                 }
 
@@ -74,6 +76,8 @@ public class CountingTxt {
             }
 
         }
+
+        System.out.print("\nTotal Count: " + totCnt);
 
     }
 
